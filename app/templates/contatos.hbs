@@ -1,9 +1,29 @@
-Entre em contato
-<div class="painel" >
+{{log model}}
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>
+				Nome
+			</th>
+			<th>
+				telefone
+			</th>
+			<th>
+				email
+			</th>
+			<th>
+				ações
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+			{{#each model as |contato| }}
+			<tr>
+				<td>{{contato.nome}}</td>
+				<td>{{contato.telefone}}</td>
+				<td>{{contato.email}}</td>
+			</tr>
+			{{/each}}
+	</tbody>
+</table>
 {{outlet}}
-
-</div>
-
-{{#link-to 'contatos.novo' tag='button'}}
-novo
-{{/link-to}}
