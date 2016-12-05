@@ -7,7 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('contatos');
+  this.route('contatos', function() {
+    this.route('novo');
+  });
+  this.route('agendas');
 });
 
 export default Router;
