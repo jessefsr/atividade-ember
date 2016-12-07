@@ -10,7 +10,8 @@ Router.map(function() {
   this.route('contatos', function() {
     this.route('novo');
   });
-  this.route('agendas');
+  this.route('agendas', function() {
+  });
 });
 
 export default Router;

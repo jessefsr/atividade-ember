@@ -5,7 +5,22 @@ module.exports = function(app) {
 
   agendasRouter.get('/', function(req, res) {
     res.send({
-      'agendas': []
+      'agendas': [{
+        id: '123SAOIDUU()eksad123-123',
+        nome: 'Jesse',
+        telefone: '79-9999-2121',
+        ativo: true,
+      },{
+        id: '123123123',
+        nome: 'Jesse',
+        telefone: '79-9999-2121',
+        ativo: true,
+      },{
+        id: '12312344566',
+        nome: 'Jesse',
+        telefone: '79-9999-2121',
+        ativo: false,
+      }]
     });
   });
 

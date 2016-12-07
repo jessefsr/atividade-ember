@@ -1,5 +1,21 @@
-<div class="painel" >
-<input />
-<button>salvar</button>
-{{outlet}}
+<h3>Novo Contato</h3>
+
+<form>
+<div class="form-group">
+<label for="inputnome">Nome</label>
+<input id="inputnome" type="text" name="nome" class="form-control">
 </div>
+<div class="form-group">
+<label for="inputtelefone">Telefone</label>
+<input id="inputtelefone" type="text" name="telefone" class="form-control">
+</div>
+<div class="form-group">
+<label for="inputemail">Email</label>
+<input id="inputemail" type="email" name="email" class="form-control">
+</div>
+
+
+<button class="btn btn-primary">SALVAR</button>
+<button class="btn ">CANCELAR</button>
+</form>
+{{outlet}}

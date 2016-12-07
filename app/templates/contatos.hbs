@@ -1,4 +1,21 @@
-{{log model}}
+{{log contatosFiltrado}}
+<div class="toolbar">
+	{{#link-to 'contatos.novo' class="btn btn-primary" tagName="button" }}NOVO{{/link-to}}
+	<button class="btn" {{action 'toggleFilter'}}>
+	<span class="glyphicon glyphicon-filter"></span>
+	</button>
+</div>
+{{#if isFiltered}}
+<form>
+	<div class="form-group">
+		<input type="" name="filtronome" class="form-control" placeholder="nome" >
+	</div>
+</form>
+{{/if}}
+
+{{#if contatosFiltrado }}
+
+
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -17,7 +34,7 @@
 		</tr>
 	</thead>
 	<tbody>
-			{{#each model as |contato| }}
+			{{#each contatosFiltrado as |contato| }}
 			<tr>
 				<td>{{contato.nome}}</td>
 				<td>{{contato.telefone}}</td>
@@ -26,4 +43,9 @@
 			{{/each}}
 	</tbody>
 </table>
+{{else}}
+	<div class="alert alert-info">
+	SEM CONTATOS PARA EXIBIR
+	</div>
+{{/if}}
 {{outlet}}
