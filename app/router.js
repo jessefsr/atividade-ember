@@ -20,7 +20,7 @@ Router.map(function() {
     this.route('novo');
     this.route('view', {
       path: '/:id'
-    });
+    }, function() {});
   });
 });
 
