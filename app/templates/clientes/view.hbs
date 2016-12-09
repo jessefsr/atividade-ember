@@ -1,1 +1,18 @@
 <h3>{{model.nome}}</h3>
+
+
+{{#if model.isDeleted }}
+  <button class="btn btn-danger"
+    {{action 'confirmar' model}}>
+    confirmar
+  </button>
+  <button class="btn btn-default"
+    {{action 'cancelar' model}}>
+    cancelar
+  </button>
+{{else}}
+  <button class="btn btn-warning"
+    {{action 'excluir' model}}>
+    <span class="glyphicon glyphicon-trash"></span>
+  </button>
+{{/if}}
