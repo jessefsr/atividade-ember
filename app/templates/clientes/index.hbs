@@ -1,0 +1,26 @@
+{{#link-to "clientes.novo" tagName="button" class="btn"}}
+  <span class="glyphicon glyphicon-plus"></span>
+  NOVO{{/link-to}}
+<table class="table">
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>ações</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each model as |cliente| }}
+    <tr>
+      <td>{{cliente.nome}}</td>
+      <td>
+        {{#link-to "clientes.view" cliente class="btn btn-default"}}
+          <span class="glyphicon glyphicon-bookmark"></span>
+        {{/link-to}}
+        <button class="btn btn-danger">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
