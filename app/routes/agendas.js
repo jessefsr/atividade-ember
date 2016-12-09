@@ -4,6 +4,6 @@ export default Ember.Route.extend({
 
 
 	model() {
-		return {};
+		return this.get('store').findAll('agenda');
 	}
 });

@@ -11,6 +11,10 @@ Router.map(function() {
     this.route('novo');
   });
   this.route('agendas', function() {
+    this.route('novo');
+    this.route('view', {
+    	path: '/:id'
+    });
   });
 });
 

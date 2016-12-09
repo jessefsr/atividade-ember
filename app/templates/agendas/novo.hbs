@@ -1,1 +1,16 @@
+<div class="form-group">
+   <label >Nome</label>
+   {{input value=model.nome class="form-control" placeholder="Telefone" }}
+ </div>
+ <div class="form-group">
+   <label >Telefone</label>
+   {{input value=model.telefone class="form-control" placeholder="Telefone" }}
+ </div>
+ <div class="checkbox">
+   <label>
+     <input type="checkbox"> Ativar
+   </label>
+ </div>
+ <button type="submit" class="btn btn-primary" {{action 'salvar' model }} >SALVAR</button>
+ <button type="submit" class="btn btn-default">CANCELAR</button>
 {{outlet}}

@@ -1,1 +1,35 @@
-teste tetstete
+{{#link-to 'agendas.novo' class="btn btn-primary"}}NOVO{{/link-to}}
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        Nome
+      </th>
+      <th>
+        Telefone
+      </th>
+      <th>
+        Ações
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |agenda| }}
+    <tr class="{{if contato.isNew "info"}}">
+      <td>
+        {{agenda.nome}}
+      </td>
+      <td>
+        {{agenda.telefone}}
+      </td>
+      <td>
+        {{#link-to 'agendas.view' agenda class="btn"}}
+        <span class="glyphicon glyphicon-pencil"></span>
+        {{/link-to}}
+
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

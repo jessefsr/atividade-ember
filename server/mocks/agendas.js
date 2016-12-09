@@ -6,17 +6,17 @@ module.exports = function(app) {
   agendasRouter.get('/', function(req, res) {
     res.send({
       'agendas': [{
-        id: '123SAOIDUU()eksad123-123',
+        id: '1',
         nome: 'Jesse',
         telefone: '79-9999-2121',
         ativo: true,
       },{
-        id: '123123123',
+        id: '2',
         nome: 'Jesse',
         telefone: '79-9999-2121',
         ativo: true,
       },{
-        id: '12312344566',
+        id: '3',
         nome: 'Jesse',
         telefone: '79-9999-2121',
         ativo: false,
@@ -25,7 +25,15 @@ module.exports = function(app) {
   });
 
   agendasRouter.post('/', function(req, res) {
-    res.status(201).end();
+        res.status(201).send(
+          {
+            'agenda': {
+              id: '13213123',
+              nome: '1312sadasd',
+              telefone: 'asdasdasd'
+            }
+          });
+
   });
 
   agendasRouter.get('/:id', function(req, res) {

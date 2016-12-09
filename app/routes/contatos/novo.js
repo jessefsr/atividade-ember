@@ -9,4 +9,4 @@ class RouteContatosNovo extends Ember.Route {
 	}
 }
 
-export default RouteContatosNovo
+export default RouteContatosNovo;
