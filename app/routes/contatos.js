@@ -1,3 +1,4 @@
+import Ember from 'ember';
 
 class RouteContatos extends Ember.Route {
 
@@ -14,4 +15,4 @@ class RouteContatos extends Ember.Route {
 	}
 }
 
-export default RouteContatos
+export default RouteContatos;
