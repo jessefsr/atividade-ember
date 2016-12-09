@@ -12,7 +12,9 @@
   </button>
 {{else}}
   <button class="btn btn-warning"
-    {{action 'excluir' model}}>
+    {{action 'excluirCliente' model}}>
     <span class="glyphicon glyphicon-trash"></span>
   </button>
 {{/if}}
+
+{{outlet}}

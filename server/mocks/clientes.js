@@ -25,7 +25,8 @@ module.exports = function(app) {
   clientesRouter.get('/:id', function(req, res) {
     res.send({
       'clientes': {
-        id: req.params.id
+        id: req.params.id,
+        documentos: ['1-1','1-2','1-3']
       }
     });
   });

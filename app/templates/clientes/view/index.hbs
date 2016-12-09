@@ -1,0 +1,19 @@
+<h1>teste</h1>
+<table>
+  <thead>
+  <tr>
+    <th>documento</th>
+    <th>numero</th>
+    <th>ações</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each model.documentos as |documento|}}
+    <tr>
+      <td>{{documento.nome}}</td>
+      <td>{{documento.numero}}</td>
+      <td>...</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

@@ -15,8 +15,10 @@ export default Ember.Route.extend({
     cancelar(cliente) {
       cliente.rollbackAttributes();
     },
+
     excluir(cliente) {
         this.get("store").deleteRecord(cliente);
+        cliente.save();
     }
   }
 });
